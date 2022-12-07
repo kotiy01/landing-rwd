@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-@use "colors";
-@use "mixins";
+@import "colors";
+@import "mixins";
 
-@use "selectors";
+@import "selectors";
 
-@use "media-480";
-@use "media-768";
-@use "media-1200";
-@use "media-1440";
-@use "media-2560";
+@import "media-480";
+@import "media-768";
+@import "media-1200";
+@import "media-1440";
+@import "media-2560";
 
-@use "print";
+@import "print";
