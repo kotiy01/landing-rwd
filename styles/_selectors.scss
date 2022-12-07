@@ -1,0 +1,61 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+h1 {
+  @include h1;
+  color: $text-color;
+}
+
+h2 {
+  @include h2;
+  color: $text-color;
+}
+
+h3 {
+  @include h3;
+  color: $text-color;
+}
+
+h4 {
+  @include h4;
+  color: $second-text-color;
+}
+
+h5 {
+  @include h5;
+  color: $text-color
+}
+
+h6 {
+  @include h6;
+  color: $second-text-color;
+}
+
+label {
+  @extend h6;
+}
+
+input {
+  @extend h6;
+}
+
+a {
+  @include a;
+}
+
+p {
+  @include p;
+  color: $second-text-color;
+}
+
+ul {
+  list-style: none;
+}

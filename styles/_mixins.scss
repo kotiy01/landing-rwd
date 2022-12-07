@@ -1,0 +1,136 @@
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
+@mixin h1 {
+  font: {
+    family: 'Martel', serif;
+    size: 58px;
+    weight: 800;
+  }
+  line-height: 65px;
+}
+
+@mixin h2 {
+  font: {
+    family: 'Martel', serif;
+    size: 40px;
+    weight: bold;
+  }
+  line-height: 50px;
+}
+
+@mixin h3 {
+  font: {
+    family: 'Martel', serif;
+    size: calcFluidFontSize(26, 24, 480, 1440);
+    weight: bold;
+  }
+  line-height: 32px;
+}
+
+@mixin h4 {
+  font: {
+    family: 'Montserrat', sans-serif;
+    size: calcFluidFontSize(22, 20, 480, 1440);
+    weight: 500;
+  }
+  line-height: 30px;
+}
+
+@mixin h5 {
+  font: {
+    family: 'Martel', serif;
+    size: calcFluidFontSize(18, 16, 480, 1440);
+    weight: bold;
+  }
+  line-height: 24px;
+}
+
+@mixin h6 {
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: calcFluidFontSize(16, 14, 480, 1440);
+    weight: 400;
+  }
+  line-height: 24px;
+}
+
+@mixin a {
+  text-decoration: none;
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: calcFluidFontSize(16, 14, 480, 1440);
+    weight: 500;
+  }
+  line-height: 24px;
+}
+
+@mixin p {
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: calcFluidFontSize(16, 14, 480, 1440);
+    weight: 400;
+  }
+  line-height: 20px;
+}
+
+@mixin link {
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: calcFluidFontSize(16, 14, 480, 1440);
+    weight: 400;
+  }
+  line-height: 24px;
+  color: $second-text-color;
+}
+
+@mixin mobile-menu {
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: 30px;
+  }
+  line-height: 45px;
+}
+
+@mixin btn-a {
+  border: 1px solid;
+  border-radius: 37px;
+  padding: 10px 20px;
+  font: {
+    family: 'Open Sans', sans-serif;
+    weight: 700;
+    size: 14px;
+  }
+}
+
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
